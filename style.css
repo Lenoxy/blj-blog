@@ -1,0 +1,25 @@
+body{
+    font-family: roboto;
+}
+
+label, #submit {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+#submit{
+    margin-left: 100px;
+}
+
+.errorbox{
+    color: red;
+    margin-left: 5px;
+}
+
+.errordiv{
+    border-style: solid;
+    border-color: red;
+    border-radius: 5px;
+    background: #ffd4d4;
+}
