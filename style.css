@@ -32,3 +32,11 @@ hr {
     border-style: inset;
     border-width: 1px;
 } 
+a{
+    color: grey;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: black;
+}

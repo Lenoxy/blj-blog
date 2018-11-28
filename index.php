@@ -87,17 +87,35 @@ foreach($stmt->fetchAll() as $x) {
     var_dump($x);
 }
 
+?>
+
+<div class="wrapper">
+
+        <h2 class="form-title">BLJ-Blogs</h2>
+        <h4>Hier sind die anderen Blogs:</h4>
+<?php
+    $user = 'guest';
+    $pass = 'blj12345';
+    $dbh = new PDO('mysql:host=10.20.16.101;dbname=blogdb', $user, $pass);
+    
+    $stmt = $dbh->prepare('SELECT * FROM andereblogs');
+    $stmt->execute();
+    
+    foreach($stmt as $output){?>
+        <div class="form-actions">
+            <a href="http://<?= htmlspecialchars($output['ip'], ENT_QUOTES, "UTF-8");
+            ?><?= htmlspecialchars($output['pfad'], ENT_QUOTES, "UTF-8");
+            ?>"><?= htmlspecialchars($output['name'], ENT_QUOTES, "UTF-8");
+            ?></a>
+            
+        </div>
+        <?php
+    }
+    ?>
+    </div>
 
 
 
-
-
-
-
-
-
-
- ?>
  </body>
  
  </html>
