@@ -16,7 +16,6 @@ $pass = '';
 $dbh = new PDO('mysql:host=localhost;dbname=blog', $user, $pass);
 
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-echo "Connected successfully";
 
     
 if (isset($_POST["speichern"])) {
@@ -27,22 +26,23 @@ if (isset($_POST["speichern"])) {
 
     if(empty($name)){
         ?> <p class=errorbox>Bitte geben Sie Ihr Name an.</p> <?php
-        $isNameValid = true;
     }
 
     if(empty($title)){
         ?> <p class=errorbox>Bitte schreiben Sie ein Titel.</p> <?php
-        $isTitleValid = true;
     }
 
     if(empty($post)){
        ?> <p class=errorbox>Bitte schreiben Sie eine Nachticht.</p> <?php
-       $isPostValid = true;
+    }
+    if(empty($name) || empty($title) || empty($post)){
+
+        
     }
 
 
-    $stmt = $dbh->prepare("INSERT INTO `posts` (created_by, created_at, post_title, post_text) VALUES($name, NOW(), $title, $post)");
-    $stmt->execute([`:crby` => $name, `:poti` => $title, `:potx` => $post]);
+    $stmt = $dbh->prepare("INSERT INTO `posts` (created_by, created_at, post_title, post_text) VALUES(:name, :title, :post)");
+    $stmt->execute([`:name` => $name, `:title` => $title, `:post` => $post]);
 
 
 
@@ -77,7 +77,7 @@ if (isset($_POST["speichern"])) {
      <form action="index.php" method="post">
         <label for="name"> Name:</label><input id="name" type="text" name="name"><br>
         <label for="title"> Title:</label><input id="title" type="text" name="title"><br>
-        <label for="post"> Text:</label><input id="post" type="text" name="post"><br>
+        <label for="post"> Text:</label><textarea id="post"  name="post"></textarea><br>
         <input type="submit" id="submit" name="speichern"><br>
     </form>
  
