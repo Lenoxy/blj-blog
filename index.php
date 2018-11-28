@@ -11,10 +11,18 @@
 
 <?php
 
+$user = 'root';
+$pass = '';
+$dbh = new PDO('mysql:host=localhost;dbname=blog', $user, $pass);
+
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+echo "Connected successfully";
+
+    
 if (isset($_POST["speichern"])) {
-    $name = $_POST['name'];
-    $title = $_POST['title'];
-    $post = $_POST['post'];
+    $name = $_POST['name'] ??'';
+    $title = $_POST['title']??'';
+    $post = $_POST['post']??'';
     ?> <div class=errordiv> <?php
 
     if(empty($name)){
@@ -31,6 +39,26 @@ if (isset($_POST["speichern"])) {
        ?> <p class=errorbox>Bitte schreiben Sie eine Nachticht.</p> <?php
        $isPostValid = true;
     }
+
+
+    $stmt = $dbh->prepare("INSERT INTO `posts` (created_by, created_at, post_title, post_text) VALUES($name, NOW(), $title, $post)");
+    $stmt->execute([`:crby` => $name, `:poti` => $title, `:potx` => $post]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?> </div> <?php
 }
 
@@ -52,31 +80,7 @@ if (isset($_POST["speichern"])) {
         <label for="post"> Text:</label><input id="post" type="text" name="post"><br>
         <input type="submit" id="submit" name="speichern"><br>
     </form>
-    <?PHP
-    DBconnect();
-    DBwrite();
-    ?>
  
  </body>
  
  </html>
-
-
-
-
-
-
-
- <?php
-
- function DBconnect(){
-
-
-    $user = 'root';
-    $pass = '';
-    $dbh = new PDO('mysql:host=localhost;dbname=blog', $user, $pass);   
- }
-
- function DBwrite(){
-     
- }
