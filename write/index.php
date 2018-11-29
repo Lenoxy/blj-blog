@@ -49,10 +49,15 @@ if (isset($_POST["speichern"])) {
        $isPostValid = false;
     }
     
+
+
     if($isNameValid===true && $isTitleValid===true && $isPostValid===true){
         $stmt = $dbh->prepare("INSERT INTO posts (created_by, post_title, post_text, image) VALUES(:name, :title, :post, :image)");
         $stmt->execute([':name' => $name, ':title' => $title, ':post' => $post, ':image' => $image]);
     }
+
+
+
 }
 ?>
      <h1>Beiträge schreiben</h1><br>
