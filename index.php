@@ -18,9 +18,4 @@
 <h1>Home</h1>
 <img class="front" src="https://media1.tenor.com/images/332fed3af42f8829a0eaa13a21903f72/tenor.gif?itemid=3955347" alt="Tolles gif, ohne welches du nicht leben könntest." width=99%>
  </body>
- asdgfdasf dasf dasf das fdas f
-das fdas f dasf 
  </html> 
-
-
- asdfsdf
