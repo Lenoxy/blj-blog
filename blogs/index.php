@@ -10,7 +10,7 @@
  <body>
 
  <a class="nav" href="../">Home</a>
- <a class="nav" href="">Beiträge anzeigen</a>
+ <a class="nav" href="../view">Beiträge anzeigen</a>
  <a class="nav" href="../write/">Beiträge schreiben</a>
  <a class="nav" href="">Andere Blogs</a>
  

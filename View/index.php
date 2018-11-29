@@ -32,9 +32,9 @@ $stmt = $dbh->prepare('SELECT * FROM posts');
             <h2><?= htmlspecialchars($output['created_by'], ENT_QUOTES, "UTF-8"); ?></h2>
             <h4><?= htmlspecialchars($output['post_title'], ENT_QUOTES, "UTF-8"); ?></h4>
             <p><?= htmlspecialchars($output['post_text'], ENT_QUOTES, "UTF-8"); ?></p>    
-            <p><?= htmlspecialchars($output['created_at'], ENT_QUOTES, "UTF-8"); ?></p>
             <?php if( htmlspecialchars($output['image'], ENT_QUOTES, "UTF-8") !== ''){
-            ?><img class="image" src="<?= htmlspecialchars($output['image'], ENT_QUOTES, "UTF-8"); ?>" alt="Bild nicht verfügbar." />
+            ?><img class="image" src="<?= htmlspecialchars($output['image'], ENT_QUOTES, "UTF-8"); ?>" alt="Bild nicht verfügbar."/>
+            <p><?= htmlspecialchars($output['created_at'], ENT_QUOTES, "UTF-8"); ?></p>
         <?php } ?>
         <hr>
         </div>

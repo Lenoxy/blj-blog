@@ -11,8 +11,8 @@
 
 
 <a class="nav" href="../">Home</a>
-<a class="nav" href="/blog/view/">Beiträge anzeigen</a>
-<a class="nav" href="/blog/write">Beiträge schreiben</a>
+<a class="nav" href="../view/">Beiträge anzeigen</a>
+<a class="nav" href="">Beiträge schreiben</a>
 <a class="nav" href="../blogs">Andere Blogs</a>
 
 <?php

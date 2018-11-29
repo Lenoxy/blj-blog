@@ -11,14 +11,12 @@
 
 
 <a class="nav" href="">Home</a>
-<a class="nav" href="/blog/view/">Beiträge anzeigen</a>
+<a class="nav" href="view/">Beiträge anzeigen</a>
 <a class="nav" href="write/">Beiträge schreiben</a>
 <a class="nav" href="blogs/">Andere Blogs</a>
 
 <h1>Home</h1>
-
-<div class="tenor-gif-embed" data-postid="5665921" data-share-method="host" data-width="40%" data-aspect-ratio="1.7785714285714287"><a href="https://tenor.com/view/undertale-determination-intensifies-frisk-gif-5665921">Undertale Determination GIF</a> from <a href="https://tenor.com/search/undertale-gifs">Undertale GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
+<img class="front" src="https://media1.tenor.com/images/332fed3af42f8829a0eaa13a21903f72/tenor.gif?itemid=3955347" alt="Tolles gif, ohne welches du nicht leben könntest." width=99%>
  </body>
  
  </html>
