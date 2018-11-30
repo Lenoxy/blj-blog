@@ -1,12 +1,5 @@
 <!DOCTYPE html>
- <html lang="de">
- <head>
-   
- <title>Leo's Blog</title>
- <meta http-equiv="content-type" content="text/html; charset=utf-8" />
- <link rel="stylesheet" href="../style.css">
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- </head>
+<?php include '../head.php' ?>
  <body>
 <?php include '../navigation.view.php'; ?>
 <h1>Home</h1>
